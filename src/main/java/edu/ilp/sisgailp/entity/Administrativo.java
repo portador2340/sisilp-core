@@ -11,7 +11,7 @@ import java.util.Date;
 @Table(name="administrativo")
 @PrimaryKeyJoinColumn(referencedColumnName = "idpersona")
 public class Administrativo extends Persona{
-    @Column(name="codAmin",length = 50,nullable = false)
+    @Column(name="cod_amin",length = 50,nullable = false)
     private String codAdmin;
 
     @Column(name="cargo",length = 20)

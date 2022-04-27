@@ -11,7 +11,7 @@ import java.util.Date;
 @Table(name="docente")
 @PrimaryKeyJoinColumn(referencedColumnName = "idpersona")
 public class Docente extends Persona{
-    @Column(name="codigoDocente",length = 20,nullable = false)
+    @Column(name="codigo_docente",length = 20,nullable = false)
     private String codigoDocente;
 
     @Column(name="cusros",length = 50)
