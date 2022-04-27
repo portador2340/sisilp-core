@@ -1,6 +1,7 @@
 package edu.ilp.sisgailp.entity;
 
 import javax.persistence.*;
+import java.util.List;
 
 @Entity
 @Table(name="escuela")
@@ -11,6 +12,14 @@ public class Escuela {
     private Long idescuela;
     private String denominacion;
     private  String  codigoescuela;
+
+
+
+    @OneToMany(mappedBy = "escuela")
+ private List<Estudiante> estudiantes;
+
+    public Escuela() {
+    }
 
     public Escuela(Long idescuela) {
         this.idescuela = idescuela;
