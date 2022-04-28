@@ -14,21 +14,29 @@ import java.util.List;
 @RequestMapping("login")
 public class pruebaController {
 
+
     @Autowired
     private IEscuelaService escuelaService;
+
     @GetMapping("/listaEscuelas")
     public List<Escuela> listaEscuelas(){
-
      return this.escuelaService.listarEscuelas();
     }
 
     @GetMapping("/saludo")
     public String saludo(){
-
         return "hola mundo";
     }
+
+
    @GetMapping("/bienvenido")
     public  String identificacion(@RequestParam String datos){
         return "bienvenido a la pontificia:" + datos;
+    }
+
+    @GetMapping("/buscarEscuelaByCodigo")
+    public Escuela  buscarEscuelaByCodigo(@RequestParam String codigo){
+
+        return this.escuelaService.obtenerEscuelaPorCodigo(codigo);
     }
 }

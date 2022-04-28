@@ -11,7 +11,7 @@ public class Escuela {
     @GeneratedValue(strategy =GenerationType.IDENTITY)
     private Long idescuela;
     private String denominacion;
-    private  String  codigoescuela;
+    private  String  codigoEscuela;
 
 
 
@@ -25,10 +25,10 @@ public class Escuela {
         this.idescuela = idescuela;
     }
 
-    public Escuela(Long idescuela, String denominacion, String codigoescuela) {
+    public Escuela(Long idescuela, String denominacion, String codigoEscuela) {
         this.idescuela = idescuela;
         this.denominacion = denominacion;
-        this.codigoescuela = codigoescuela;
+        this.codigoEscuela = codigoEscuela;
     }
 
     public Long getIdescuela() {
@@ -47,11 +47,19 @@ public class Escuela {
         this.denominacion = denominacion;
     }
 
-    public String getCodigoescuela() {
-        return codigoescuela;
+    public String getCodigoEscuela() {
+        return codigoEscuela;
     }
 
-    public void setCodigoescuela(String codigoescuela) {
-        this.codigoescuela = codigoescuela;
+    public void setCodigoEscuela(String codigoEscuela) {
+        this.codigoEscuela = codigoEscuela;
+    }
+
+    public List<Estudiante> getEstudiantes() {
+        return estudiantes;
+    }
+
+    public void setEstudiantes(List<Estudiante> estudiantes) {
+        this.estudiantes = estudiantes;
     }
 }
