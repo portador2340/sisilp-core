@@ -17,5 +17,9 @@ Escuela obtenerEscuelaPorCodigo(String codigo);
 @Query("SELECT e FROM Escuela e WHERE e.codigoEscuela = :codigo")
 Escuela obtenerEscuelaPorParam(@Param("codigo") String codigo);
 
-//obtiene una escuela a traves de su codigo y denominacion
+//obtiene una escuela a traves de su id y denominacion
+    Escuela findByIdescuelaAndDenominacion(Long idescuela,String denominacion);
+
+
+
 }

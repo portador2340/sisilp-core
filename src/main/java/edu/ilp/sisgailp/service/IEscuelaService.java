@@ -11,4 +11,7 @@ public interface IEscuelaService {
 //obtener escuela por su codigo
     Escuela obtenerEscuelaPorCodigo(String codigo);
 
+    //buscar una escula atraves de si id y denominacio
+    Escuela buscarEscuelaByIdAndDenominacion(Long idescuela,String denominacion);
+
 }

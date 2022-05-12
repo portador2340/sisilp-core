@@ -39,4 +39,10 @@ public class pruebaController {
 
         return this.escuelaService.obtenerEscuelaPorCodigo(codigo);
     }
+
+    @GetMapping("/buscarEscuelaByIdAndDenominacion")
+    public Escuela  buscarEscuelaByIdAndDenominacion(@RequestParam Long idescuela,@RequestParam String nombre){
+
+        return this.escuelaService.buscarEscuelaByIdAndDenominacion(idescuela,nombre);
+    }
 }

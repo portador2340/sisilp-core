@@ -25,5 +25,11 @@ public class EscuelaServiceImpl implements IEscuelaService {
         return  this.escuelaDao.obtenerEscuelaPorCodigo(codigo);
     }
 
+    @Override
+    public Escuela buscarEscuelaByIdAndDenominacion(Long idescuela, String denominacion) {
+        Escuela escuela=this.escuelaDao.findByIdescuelaAndDenominacion(idescuela,denominacion);
+        return this.escuelaDao.findByIdescuelaAndDenominacion(idescuela,denominacion);
+    }
+
 
 }
